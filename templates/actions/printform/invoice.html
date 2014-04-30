@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{_wp('Invoice')}</title>
+        <meta charset="UTF-8">
+        <style>
+            {include file="./css/printform.css" inline}            
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <div id="company">
+                <h1>{$settings.COMPANY_NAME|default:_wp('Seller')|escape}{if !empty($settings.COMPANY_SLOGAN)}<small>{$settings.COMPANY_SLOGAN}</small>{/if}</h1>
+                <p class="address">
+                    {if !empty($settings.COMPANY_ADDRESS_STREET)}<span class="street">{$settings.COMPANY_ADDRESS_STREET}</span><br>{/if}
+                    {if !empty($settings.COMPANY_ADDRESS_CITY)}<span class="city">{$settings.COMPANY_ADDRESS_CITY}</span>,{/if}
+                    {if !empty($settings.COMPANY_ADDRESS_STATE)}<span class="state">{$settings.COMPANY_ADDRESS_STATE}</span>,{/if}
+                    {if !empty($settings.COMPANY_ADDRESS_ZIP)}<span class="zip">{$settings.COMPANY_ADDRESS_ZIP}</span><br>{/if}
+                    {if !empty($settings.COMPANY_ADDRESS_COUNTRY)}<span class="country">{$settings.COMPANY_ADDRESS_COUNTRY}</span><br>{/if}
+                    {if !empty($settings.COMPANY_PHONE)}<span class="phone">{$settings.COMPANY_PHONE}</span>{/if}
+                </p>
+            </div>
+            <div id="details">
+                <h2>{_wp('Invoice')}</h2>
+                <table>
+                    <tr class="date">
+                        <th>{_wp('Date')}</th>
+                        {* @todo Спросить у пользователя или получить автоматом из локали *}
+                        <td>{$order.datetime|date_format:'Y-m-d'}</td>
+                    </tr>
+                    {* <tr class="invoice_no">
+                        <th>{_wp('Invoice #')}</th>
+                        <td>{$order.id_str|default:'1234567890'|replace:'#':''}</td>
+                    </tr>*}
+                    <tr class="order_no">
+                        <th>{_wp('Order #')}</th>
+                        <td>{$order.id_str|default:'1234567890'|replace:'#':''}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="customer">
+            <div id="shipping">
+                <h3>{_wp('Consignee')}</h3>
+                {if !empty($order.shipping_address.name)}{$name = $order.shipping_address.name}{else}{$name = $order.contact_name}{/if}
+                {if !empty($name)}<p class="name">{$name|escape}</p>{/if}
+                {if !empty($order->contact_company)}<p class="company">{$order->contact_company|escape}</p>{/if}
+                {if !empty($order.shipping_address.address)}{$address = $order.shipping_address.address}{else}{$address = $order.contact_address}{/if}
+                {if !empty($address)}<p class="address">{$order.shipping_address.address|escape}</p>{/if}
+                {$phone = $order->getContactField('phone', 'html')}
+                {if !empty($phone)}<p class="phone">[`Phone`]: <span>{$phone|escape}</span></p>{/if}
+                {*if !empty($order.shipping_name)}<p class="method">{_w('Delivery type')}: <span>{$order.shipping_name}</span></p>{/if*}
+            </div>
+            <div id="billing">
+                <h3>{_wp('Payer')}</h3>
+                {if !empty($order.billing_address.name)}{$name = $order.billing_address.name}{else}{$name = $order.contact_name}{/if}
+                {if !empty($name)}<p class="name">{$name|escape}</p>{/if}
+                {if !empty($order->contact_company)}<p class="company">{$order->contact_company|escape}</p>{/if}
+                {if !empty($order.billing_address.name)}{$address = $order.billing_address.address}{else}{$address = $order.contact_address}{/if}
+                {if !empty($address)}<p class="address">{$order.billing_address.address|escape}</p>{/if}
+                {$phone = $order->getContactField('phone', 'html')}
+                {if !empty($phone)}<p class="phone">{_wp('Phone')}: <span>{$phone}</span></p>{/if}
+                {if !empty($order.payment_name)}<p class="method">{_wp('Payment type')}: <span>{$order.payment_name}</span></p>{/if}
+            </div>
+        </div>
+        {if !empty($order.comment)}
+            <div id="order-comment">
+                {$order.comment|escape}
+            </div>
+        {/if}
+        <div id="order-items">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th class="description">{_wp('Name')}</th>
+                        <th>{_wp('Qty')}</th>
+                        <th>{_wp('Price')}</th>
+                        <th>{_wp('Amount')}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {foreach $order.items as $oi}
+                    <tr>
+                        <td class="index">{$oi@index+1}</td>
+                        <td class="name">{$oi.name|default:"&nbsp;"}{if $oi.sku} ({$oi.sku}){/if}</td>
+                        <td class="quantity">{$oi.quantity|string_format:"%d"}</td>
+                        <td class="price">{shop_currency($oi.price, $order.currency)}</td>
+                        <td class="amount">{shop_currency($oi.total, $order.currency)}</td>
+                    </tr>
+                    {/foreach}
+                </tbody>
+                <tbody id="totals">
+                    <tr>
+                        <td colspan="4">{_wp('Subtotal')}</td>
+                        <td class="amount">{shop_currency($order.subtotal, $order.currency)}</td>
+                    </tr>
+                    {if $order.discount > 0}
+                        <tr>
+                            <td colspan="4">{_wp('Discount')}</td>
+                            <td class="amount">&minus;{shop_currency($order.discount, $order.currency)}</td>
+                        </tr>
+                    {/if}
+                    {if $order.shipping > 0}
+                        <tr>
+                            <td colspan="4">{_wp('Shipping')} {$order.shipping_name|escape}</td>
+                            <td class="amount">{shop_currency($order.shipping, $order.currency)}</td>
+                        </tr>
+                    {/if}
+                    {*if $order.tax > 0*}
+                        <tr>
+                            <td colspan="4">{_wp('Tax')}</td>
+                            <td class="amount">{shop_currency($order.tax, $order.currency)}</td>
+                        </tr>
+                    {*/if*}
+                    <tr id="total">
+                        <td colspan="4">{_wp('Total')}</td>
+                        <td class="amount">{shop_currency($order.total, $order.currency)}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
