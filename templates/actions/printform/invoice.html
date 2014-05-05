@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    {if empty($settings.CURRENCY)}{$settings.CURRENCY = $order.currency}{/if}
     <head>
         <title>{_wp('Invoice')}</title>
         <meta charset="UTF-8">
@@ -81,37 +82,37 @@
                         <td class="index">{$oi@index+1}</td>
                         <td class="name">{$oi.name|default:"&nbsp;"}{if $oi.sku} ({$oi.sku}){/if}</td>
                         <td class="quantity">{$oi.quantity|string_format:"%d"}</td>
-                        <td class="price">{shop_currency($oi.price, $order.currency)}</td>
-                        <td class="amount">{shop_currency($oi.total, $order.currency)}</td>
+                        <td class="price">{shop_currency($oi.price, $order.currency, $settings.CURRENCY)}</td>
+                        <td class="amount">{shop_currency($oi.total, $order.currency, $settings.CURRENCY)}</td>
                     </tr>
                     {/foreach}
                 </tbody>
                 <tbody id="totals">
                     <tr>
                         <td colspan="4">{_wp('Subtotal')}</td>
-                        <td class="amount">{shop_currency($order.subtotal, $order.currency)}</td>
+                        <td class="amount">{shop_currency($order.subtotal, $order.currency, $settings.CURRENCY)}</td>
                     </tr>
                     {if $order.discount > 0}
                         <tr>
                             <td colspan="4">{_wp('Discount')}</td>
-                            <td class="amount">&minus;{shop_currency($order.discount, $order.currency)}</td>
+                            <td class="amount">&minus;{shop_currency($order.discount, $order.currency, $settings.CURRENCY)}</td>
                         </tr>
                     {/if}
                     {if $order.shipping > 0}
                         <tr>
                             <td colspan="4">{_wp('Shipping')} {$order.shipping_name|escape}</td>
-                            <td class="amount">{shop_currency($order.shipping, $order.currency)}</td>
+                            <td class="amount">{shop_currency($order.shipping, $order.currency, $settings.CURRENCY)}</td>
                         </tr>
                     {/if}
                     {*if $order.tax > 0*}
                         <tr>
                             <td colspan="4">{_wp('Tax')}</td>
-                            <td class="amount">{shop_currency($order.tax, $order.currency)}</td>
+                            <td class="amount">{shop_currency($order.tax, $order.currency, $settings.CURRENCY)}</td>
                         </tr>
                     {*/if*}
                     <tr id="total">
                         <td colspan="4">{_wp('Total')}</td>
-                        <td class="amount">{shop_currency($order.total, $order.currency)}</td>
+                        <td class="amount">{shop_currency($order.total, $order.currency, $settings.CURRENCY)}</td>
                     </tr>
                 </tbody>
             </table>
