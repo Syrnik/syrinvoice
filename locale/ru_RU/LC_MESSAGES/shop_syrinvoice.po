@@ -158,3 +158,11 @@ msgstr "Контактный телефон вашей компании"
 #: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:64
 msgid "Payment type"
 msgstr "Оплата"
+
+#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:74
+msgid "Currency"
+msgstr "Валюта"
+
+#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:75
+msgid "Select the currency for the invoice"
+msgstr "Укажите валюту для накладной"
