@@ -8,7 +8,10 @@
             {include file="./css/printform.css" inline}            
         </style>
     </head>
-    <body>
+    <body onload="window.print();">
+        <p id="close" align="right">
+            <a href="javascript: window.close();">&times; {_wp("Close")}</a>
+        </p>
         <div id="header">
             <div id="company">
                 <h1>{$settings.COMPANY_NAME|default:_wp('Seller')|escape}{if !empty($settings.COMPANY_SLOGAN)}<small>{$settings.COMPANY_SLOGAN}</small>{/if}</h1>

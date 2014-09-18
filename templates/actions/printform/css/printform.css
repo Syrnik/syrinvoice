@@ -2,6 +2,9 @@
   @page  {
     margin: 1cm;
   }
+  .no-print {
+    display: none;
+  }
 }
 body {
   font-family: "Helvetica Neue", "Liberation Sans", Arial, sans-serif;
@@ -12,6 +15,20 @@ h1 {
 }
 h2 {
   font-size: 7.5mm;
+}
+#close a {
+  display: inline-block;
+  border: 1px solid #036;
+  padding: 7px 15px;
+  color: firebrick;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #ffeaea;
+  text-decoration: none;
+}
+#close a:hover {
+  color: #777;
+  background-color: #eee;
 }
 #header:before,
 #header:after {
