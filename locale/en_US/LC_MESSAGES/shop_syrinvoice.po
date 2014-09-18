@@ -164,3 +164,7 @@ msgstr ""
 #: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:75
 msgid "Select the currency for the invoice"
 msgstr ""
+
+#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:13
+msgid "Close"
+msgstr ""
