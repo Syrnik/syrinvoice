@@ -1,7 +1,7 @@
 <?php
 /**
  * @package Syrinvoice.Controllers
- * @version 1.0
+ * @version 1.1.2
  * @copyright (c) 2014, Serge Rodovnichenko
  * @license http://www.webasyst.com/terms/#eula Webasyst
  */
@@ -11,7 +11,7 @@ class shopSyrinvoicePluginPrintformDisplayAction extends waViewAction {
         $plugin_id = 'syrinvoice';
         $plugin = waSystem::getInstance()->getPlugin($plugin_id);
         $order_id = waRequest::request('order_id', null, waRequest::TYPE_INT);
-        $order = shopPayment::getOrderData($order_id, $this);
+        $order = shopPayment::getOrderData($order_id);
 
         switch (wa()->getEnv()) {
             case 'backend':
