@@ -8,6 +8,11 @@
 class shopSyrinvoicePluginPrintformDisplayAction extends waViewAction {
 
     public function execute() {
+
+        if (!wa()->getUser()->getRights('shop', 'orders')) {
+            throw new waRightsException('Access denied');
+        }
+
         $plugin_id = 'syrinvoice';
         $plugin = waSystem::getInstance()->getPlugin($plugin_id);
         $order_id = waRequest::request('order_id', null, waRequest::TYPE_INT);
