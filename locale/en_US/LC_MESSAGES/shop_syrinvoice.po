@@ -168,3 +168,11 @@ msgstr ""
 #: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:13
 msgid "Close"
 msgstr ""
+
+#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:81
+msgid "Apply discount to goods"
+msgstr ""
+
+#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:82
+msgid "Apply discount to every ordered product item. All product prices will be lowered by value of discount if this option is turned on."
+msgstr ""

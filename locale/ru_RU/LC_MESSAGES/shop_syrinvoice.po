@@ -8,11 +8,12 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n"
-"%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?(1):2));\n"
+"Plural-Forms: nplurals=3; plural=((((n%10)==1)&&((n%100)!=11))?(0):(((((n%10)>=2)&&((n%10)<=4))&&(((n%100)<10)||((n%100)>=20)))?"
+"(1):2));\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-Basepath: .\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.4\n"
+"Language: ru_RU\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: .\n"
 
@@ -22,8 +23,7 @@ msgid "Phone"
 msgstr "Телефон"
 
 #: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:4
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:25
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/plugin.php:10
+#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:25 /wa-apps/shop/plugins/syrinvoice/lib/config/plugin.php:10
 msgid "Invoice"
 msgstr "Накладная"
 
@@ -170,3 +170,11 @@ msgstr "Укажите валюту для накладной"
 #: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:13
 msgid "Close"
 msgstr "Закрыть"
+
+#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:81
+msgid "Apply discount to goods"
+msgstr "Применять скидку к товарам"
+
+#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:82
+msgid "Apply discount to every ordered product item. All product prices will be lowered by value of discount if this option is turned on."
+msgstr "Скидка будет распределена по каждой товарной позиции в накладной"
