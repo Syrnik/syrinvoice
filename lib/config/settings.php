@@ -75,5 +75,14 @@ return array(
         'description' => _wp('Select the currency for the invoice'),
         'control_type' => waHtmlControl::SELECT,
         'options' => $syrInvoiceCurrOptions
+    ),
+    'ITEM_DISCOUNT' => array(
+        'value'        => 0,
+        'title'        => _wp('Apply discount to goods'),
+        'description'  => _wp(
+            'Apply discount to every ordered product item. All product prices will be lowered by ' .
+            'value of discount if this option is turned on.'
+        ),
+        'control_type' => waHtmlControl::CHECKBOX
     )
 );
