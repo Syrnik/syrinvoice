@@ -1,8 +1,8 @@
 <?php
 /**
  * @package Syrinvoice.Config
- * @version 1.1.0
- * @copyright (c) 2014, Serge Rodovnichenko
+ * @version 2.1.0
+ * @copyright (c) 2014-2016, Serge Rodovnichenko
  * @license http://www.webasyst.com/terms/#eula Webasyst
  */
 
