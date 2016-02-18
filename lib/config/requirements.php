@@ -2,11 +2,11 @@
 
 return array(
     'app.installer' => array(
-        'version' => '1.3.0.35367',
+        'version' => '1.5.0',
         'strict'  => true
     ),
     'app.shop'      => array(
-        'version' => '6.1.0.40700',
+        'version' => '6.3.0',
         'strict'  => true
     ),
 );
