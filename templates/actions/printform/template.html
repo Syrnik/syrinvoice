@@ -1,10 +1,4 @@
 {if empty($settings.CURRENCY)}{$settings.CURRENCY = $order.currency}{/if}
-<style type="text/css">
-{include file="./css/printform.css" inline}
-</style>
-<p id="close" align="right" class="no-print">
-    <a href="javascript: window.close();">&times; {_wp("Close")}</a>
-</p>
 <div id="header">
     <div id="company">
         <h1>{$settings.COMPANY_NAME|default:_wp('Seller')|escape}{if !empty($settings.COMPANY_SLOGAN)}<small>{$settings.COMPANY_SLOGAN}</small>{/if}</h1>

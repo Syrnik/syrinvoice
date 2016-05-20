@@ -1,11 +1,14 @@
 <?php
-
 /**
  * @package Syrinvoice
  * @author Serge Rodovnichenko <sergerod@gmail.com>
  * @version 2.1.0
  * @copyright (c) 2014-2016, Serge Rodovnichenko
  * @license http://www.webasyst.com/terms/#eula Webasyst
+ */
+
+/**
+ * Main plugin class
  */
 class shopSyrinvoicePlugin extends shopPrintformPlugin
 {

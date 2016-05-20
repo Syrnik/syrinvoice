@@ -5,7 +5,15 @@
     <title>{_wp('Invoice')}</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
-<body onload="window.print()">
+<body{if ifset($interactive['auto_print_dlg'], false)} onload="window.print(){/if}">
+<style type="text/css">
+    {include file="./css/printform.css" inline}
+</style>
+{if ifset($interactive['close_btn'], false)}
+    <p id="close" align="right" class="no-print">
+        <a href="javascript: window.close();">&times; {_wp("Close")}</a>
+    </p>
+{/if}
 {$content}
 </body>
 </html>

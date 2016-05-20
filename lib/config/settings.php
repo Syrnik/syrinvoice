@@ -13,42 +13,42 @@ foreach ($syrInvoiceCurrencies as $key => $value) {
 }
 
 return array(
-    'COMPANY_NAME' => array(
+    'COMPANY_NAME'            => array(
         'value'        => '',
         'title'        => _wp('Company Name'),
         'description'  => _wp('Your company name'),
         'control_type' => 'text',
         'subject'      => 'printform',
     ),
-    'COMPANY_SLOGAN' => array(
+    'COMPANY_SLOGAN'          => array(
         'value'        => '',
         'title'        => _wp('Company Slogan'),
         'description'  => _wp('Your company slogan'),
         'control_type' => 'text',
         'subject'      => 'printform',
     ),
-    'COMPANY_ADDRESS_STREET' => array(
+    'COMPANY_ADDRESS_STREET'  => array(
         'value'        => '',
         'title'        => _wp('Company street'),
         'description'  => _wp('Your company street address'),
         'control_type' => 'text',
         'subject'      => 'printform',
     ),
-    'COMPANY_ADDRESS_CITY' => array(
+    'COMPANY_ADDRESS_CITY'    => array(
         'value'        => '',
         'title'        => _wp('Company city'),
         'description'  => _wp('Your company city'),
         'control_type' => 'text',
         'subject'      => 'printform',
     ),
-    'COMPANY_ADDRESS_STATE' => array(
+    'COMPANY_ADDRESS_STATE'   => array(
         'value'        => '',
         'title'        => _wp('Company state/region'),
         'description'  => _wp('Your company state/region'),
         'control_type' => 'text',
         'subject'      => 'printform',
     ),
-    'COMPANY_ADDRESS_ZIP' => array(
+    'COMPANY_ADDRESS_ZIP'     => array(
         'value'        => '',
         'title'        => _wp('Company zip code'),
         'description'  => _wp('Your company zip/postal code'),
@@ -62,27 +62,46 @@ return array(
         'control_type' => 'text',
         'subject'      => 'printform',
     ),
-    'COMPANY_PHONE' => array(
+    'COMPANY_PHONE'           => array(
         'value'        => '',
         'title'        => _wp('Company phone'),
         'description'  => _wp('Your company phone'),
         'control_type' => 'text',
         'subject'      => 'printform',
     ),
-    'CURRENCY' => array(
-        'value' => waSystem::getInstance('shop')->getConfig()->getCurrency(),
-        'title' => _wp('Currency'),
-        'description' => _wp('Select the currency for the invoice'),
+    'CURRENCY'                => array(
+        'value'        => waSystem::getInstance('shop')->getConfig()->getCurrency(),
+        'title'        => _wp('Currency'),
+        'description'  => _wp('Select the currency for the invoice'),
         'control_type' => waHtmlControl::SELECT,
-        'options' => $syrInvoiceCurrOptions
+        'options'      => $syrInvoiceCurrOptions,
+        'subject'      => 'printform',
     ),
-    'ITEM_DISCOUNT' => array(
+    'ITEM_DISCOUNT'           => array(
         'value'        => 0,
         'title'        => _wp('Apply discount to goods'),
         'description'  => _wp(
             'Apply discount to every ordered product item. All product prices will be lowered by ' .
             'value of discount if this option is turned on.'
         ),
-        'control_type' => waHtmlControl::CHECKBOX
+        'control_type' => waHtmlControl::CHECKBOX,
+        'subject'      => 'printform',
+    ),
+    'INTERACTIVE'             => array(
+        'control_type' => waHtmlControl::GROUPBOX,
+        'title'        => _wp('Interactive elements'),
+        'description'  => _wp('Elements that can cause problems with mass-printing mode of Shop-Script 7'),
+        'options'      => array(
+            array(
+                'title' => _wp('Automatically open print dialog'),
+                'value' => 'auto_print_dlg'
+            ),
+            array(
+                'title'       => _wp('"Close" button'),
+                'description' => _wp('This button simply does not work in mass-print mode'),
+                'value'       => 'close_btn'
+            )
+        ),
+        'subject'      => 'printform',
     )
 );
