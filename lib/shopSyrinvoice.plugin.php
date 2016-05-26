@@ -77,6 +77,17 @@ class shopSyrinvoicePlugin extends shopPrintformPlugin
         return $order;
     }
 
+    public static function listCurrencies()
+    {
+        $currencies = wa('shop')->getConfig()->getCurrencies();
+        $options = array();
+        foreach ($currencies as $key => $value) {
+            $options[$key] = $value['title'];
+        }
+
+        return $options;
+    }
+
     /**
      *
      * @param waOrder $order

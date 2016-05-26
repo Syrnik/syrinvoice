@@ -6,12 +6,6 @@
  * @license http://www.webasyst.com/terms/#eula Webasyst
  */
 
-$syrInvoiceCurrencies = waSystem::getInstance('shop')->getConfig()->getCurrencies();
-$syrInvoiceCurrOptions = array();
-foreach ($syrInvoiceCurrencies as $key => $value) {
-    $syrInvoiceCurrOptions[$key] = $value['title'];
-}
-
 return array(
     'COMPANY_NAME'            => array(
         'value'        => '',
@@ -70,12 +64,12 @@ return array(
         'subject'      => 'printform',
     ),
     'CURRENCY'                => array(
-        'value'        => waSystem::getInstance('shop')->getConfig()->getCurrency(),
-        'title'        => _wp('Currency'),
-        'description'  => _wp('Select the currency for the invoice'),
-        'control_type' => waHtmlControl::SELECT,
-        'options'      => $syrInvoiceCurrOptions,
-        'subject'      => 'printform',
+        'value'            => wa('shop')->getConfig()->getCurrency(),
+        'title'            => _wp('Currency'),
+        'description'      => _wp('Select the currency for the invoice'),
+        'control_type'     => waHtmlControl::SELECT,
+        'options_callback' => array('shopSyrinvoicePlugin', 'listCurrencies'),
+        'subject'          => 'printform',
     ),
     'ITEM_DISCOUNT'           => array(
         'value'        => 0,
