@@ -113,7 +113,7 @@ msgstr "Адрес компании: улица"
 
 #: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:21
 msgid "Your company street address"
-msgstr "Адрес компании: улица"
+msgstr "Адрес вашей компании: улица"
 
 #: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:27
 msgid "Company city"
@@ -125,7 +125,7 @@ msgstr "Адрес вашей компании: город"
 
 #: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:34
 msgid "Company state/region"
-msgstr "Адрес еомпании: регион"
+msgstr "Адрес компании: регион"
 
 #: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:35
 msgid "Your company state/region"
