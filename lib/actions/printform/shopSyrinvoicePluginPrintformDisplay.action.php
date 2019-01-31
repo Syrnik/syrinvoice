@@ -1,13 +1,20 @@
 <?php
-
 /**
  * @package Syrinvoice.Controllers
- * @version 2.0.0
- * @copyright (c) 2014-2016, Serge Rodovnichenko
+ * @version 2.1.0
+ * @copyright (c) 2014-2019, Serge Rodovnichenko
  * @license http://www.webasyst.com/terms/#eula Webasyst
+ */
+
+/**
+ * Class shopSyrinvoicePluginPrintformDisplayAction
  */
 class shopSyrinvoicePluginPrintformDisplayAction extends waViewAction
 {
+    /**
+     * @throws waException
+     * @throws waRightsException
+     */
     public function execute()
     {
         if (!wa()->getUser()->getRights('shop', 'orders')) {
@@ -19,6 +26,6 @@ class shopSyrinvoicePluginPrintformDisplayAction extends waViewAction
          */
         $plugin = wa('shop')->getPlugin('syrinvoice');
         $order_id = waRequest::request('order_id', null, waRequest::TYPE_INT);
-        $this->view->assign('content', $plugin->renderForm($order_id));
+        $this->view->assign('content', $plugin->renderPrintform($order_id));
     }
 }
