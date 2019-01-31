@@ -70,5 +70,12 @@ return array(
         'control_type'     => waHtmlControl::SELECT,
         'options_callback' => array($this, 'listCurrencies'),
         'subject'          => 'printform'
+    ),
+    'mark_qty'                => array(
+        'title'        => _wp('Mark item with quantity greater or equal'),
+        'description'  => _wp('Leave empty or set to 0 to disable this feature. Otherwise all items with quantity greater or equal than given value will be rendered with bold font. This may help your staff to collect an order.'),
+        'control_type' => waHtmlControl::INPUT,
+        'value'        => '',
+        'subject'      => 'printform'
     )
 );
