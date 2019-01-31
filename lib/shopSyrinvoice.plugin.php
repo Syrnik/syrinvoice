@@ -22,4 +22,18 @@ class shopSyrinvoicePlugin extends shopPrintformPlugin
         }
         return $res;
     }
+
+    /**
+     * @return array
+     */
+    public function listCurrencies()
+    {
+        $currencies = wa('shop')->getConfig()->getCurrencies();
+        $list = array();
+        foreach ($currencies as $key => $currency) {
+            $list[] = array('value'=>$key, 'title'=>$currency['title']);
+        }
+
+        return $list;
+    }
 }
