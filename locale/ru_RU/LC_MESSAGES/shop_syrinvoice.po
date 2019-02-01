@@ -169,6 +169,16 @@ msgstr "Укажите валюту для накладной"
 msgid "Close"
 msgstr "Закрыть"
 
+#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:75
+msgid "Mark item with quantity greater or equal"
+msgstr "Отмечать строку с количеством равным или большим, чем"
+
+#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:76
+msgid "Leave empty or set to 0 to disable this feature. Otherwise all items with quantity greater or equal than given value will be rendered with bold font. This may help your staff to collect an order."
+msgstr ""
+"Оставьте пустым или укажите '0', чтобы выключить эту опцию. Иначе все позиции, с количеством равным или большим, чем указано, будут отмечены полужирным шрифтом. Это может помочь вашим сотрудникам "
+"правильно собрать заказ."
+
 #: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:81
 msgid "Apply discount to goods"
 msgstr "Применять скидку к товарам"
