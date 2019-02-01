@@ -168,3 +168,11 @@ msgstr ""
 #: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:13
 msgid "Close"
 msgstr ""
+
+#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:75
+msgid "Mark item with quantity greater or equal"
+msgstr ""
+
+#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:76
+msgid "Leave empty or set to 0 to disable this feature. Otherwise all items with quantity greater or equal than given value will be rendered with bold font. This may help your staff to collect an order."
+msgstr ""
