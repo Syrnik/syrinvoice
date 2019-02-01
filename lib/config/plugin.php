@@ -7,8 +7,8 @@
  */
 
 return array(
-    'name'        => _wp('Invoice'),
-    'description' => _wp('Simple and clean Invoice printform'),
+    'name'        => /*_wp*/('Invoice'),
+    'description' => /*_wp*/('Simple and clean Invoice printform'),
     'vendor'      => 670917,
     'version'     => '3.0.0',
     'img'         => 'img/invoice-icon.png',
