@@ -111,7 +111,7 @@ msgstr "Адрес компании: улица"
 
 #: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:21
 msgid "Your company street address"
-msgstr "Адрес компании: улица"
+msgstr "Адрес вашей компании: улица"
 
 #: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:27
 msgid "Company city"
@@ -123,7 +123,7 @@ msgstr "Адрес вашей компании: город"
 
 #: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:34
 msgid "Company state/region"
-msgstr "Адрес еомпании: регион"
+msgstr "Адрес компании: регион"
 
 #: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:35
 msgid "Your company state/region"
@@ -168,6 +168,34 @@ msgstr "Укажите валюту для накладной"
 #: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:13
 msgid "Close"
 msgstr "Закрыть"
+
+#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:81
+msgid "Apply discount to goods"
+msgstr "Применять скидку к товарам"
+
+#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:82
+msgid "Apply discount to every ordered product item. All product prices will be lowered by value of discount if this option is turned on."
+msgstr "Скидка будет распределена по каждой товарной позиции в накладной"
+
+#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:92
+msgid "Interactive elements"
+msgstr "Интерактивные элементы"
+
+#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:93
+msgid "Elements that can cause problems with mass-printing mode of Shop-Script 7"
+msgstr "Экранные элементы, которые могут вызвать проблемы при использовании режима массовой печати Shop-Script 7"
+
+#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:96
+msgid "Automatically open print dialog"
+msgstr "Автоматически открывать диалог печати"
+
+#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:100
+msgid "\"Close\" button"
+msgstr "Кнопка \"Закрыть\""
+
+#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:101
+msgid "This button simply does not work in mass-print mode"
+msgstr "Эта кнопка просто не работает в режиме массовой печати"
 
 #: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:75
 msgid "Mark item with quantity greater or equal"
