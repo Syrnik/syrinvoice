@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: shop/plugins/syrinvoice\n"
 "POT-Creation-Date: 2014-04-20 00:53+0400\n"
 "PO-Revision-Date: \n"
-"Last-Translator:  shop/plugins/syrinvoice\n"
-"Language-Team:  shop/plugins/syrinvoice\n"
+"Last-Translator: shop/plugins/syrinvoice\n"
+"Language-Team: shop/plugins/syrinvoice\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,193 +14,143 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: .\n"
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:53
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:64
 msgid "Phone"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:4
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:25
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/plugin.php:10
 msgid "Invoice"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:14
 msgid "Seller"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:28
 msgid "Date"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:34
 msgid "Invoice #"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:38
 msgid "Order #"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:46
 msgid "Consignee"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:57
 msgid "Payer"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:78
 msgid "Name"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:79
 msgid "Qty"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:80
 msgid "Price"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:82
 msgid "Amount"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:97
 msgid "Subtotal"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:102
 msgid "Discount"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:108
 msgid "Shipping"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:114
 msgid "Tax"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:119
 msgid "Total"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/plugin.php:11
 msgid "Simple and clean Invoice printform"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:6
 msgid "Company Name"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:7
 msgid "Your company name"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:13
 msgid "Company Slogan"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:14
 msgid "Your company slogan"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:20
 msgid "Company street"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:21
 msgid "Your company street address"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:27
 msgid "Company city"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:28
 msgid "Your company city"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:34
 msgid "Company state/region"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:35
 msgid "Your company state/region"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:41
 msgid "Company zip code"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:42
 msgid "Your company zip/postal code"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:48
 msgid "Company country"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:49
 msgid "Your company country"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:55
 msgid "Company phone"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:56
 msgid "Your company phone"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:64
 msgid "Payment type"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:74
 msgid "Currency"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:75
 msgid "Select the currency for the invoice"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/templates/actions/printform/invoice.html:13
 msgid "Close"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:81
 msgid "Apply discount to goods"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:82
 msgid "Apply discount to every ordered product item. All product prices will be lowered by value of discount if this option is turned on."
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:92
 msgid "Interactive elements"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:93
 msgid "Elements that can cause problems with mass-printing mode of Shop-Script 7"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:96
 msgid "Automatically open print dialog"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:100
 msgid "\"Close\" button"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:101
 msgid "This button simply does not work in mass-print mode"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:75
 msgid "Mark item with quantity greater or equal"
 msgstr ""
 
-#: /wa-apps/shop/plugins/syrinvoice/lib/config/settings.php:76
 msgid "Leave empty or set to 0 to disable this feature. Otherwise all items with quantity greater or equal than given value will be rendered with bold font. This may help your staff to collect an order."
 msgstr ""
