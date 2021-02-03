@@ -71,16 +71,6 @@ return array(
         'options_callback' => array($this, 'listCurrencies'),
         'subject'          => 'printform',
     ),
-    'ITEM_DISCOUNT'           => array(
-        'value'        => 0,
-        'title'        => /*_wp*/('Apply discount to goods'),
-        'description'  => /*_wp*/(
-            'Apply discount to every ordered product item. All product prices will be lowered by ' .
-            'value of discount if this option is turned on.'
-        ),
-        'control_type' => waHtmlControl::CHECKBOX,
-        'subject'      => 'printform',
-    ),
     'INTERACTIVE'             => array(
         'control_type' => waHtmlControl::GROUPBOX,
         'title'        => /*_wp*/('Interactive elements'),
