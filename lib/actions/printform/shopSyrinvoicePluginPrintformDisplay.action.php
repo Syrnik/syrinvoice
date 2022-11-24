@@ -1,13 +1,15 @@
 <?php
 /**
  * @package Syrinvoice.Controllers
- * @version 3.0.0
- * @copyright (c) 2014-2021, Serge Rodovnichenko
+ * @copyright (c) 2014-2022, Serge Rodovnichenko
  * @license http://www.webasyst.com/terms/#eula Webasyst
  */
 
+declare(strict_types=1);
+
 /**
  * Class shopSyrinvoicePluginPrintformDisplayAction
+ * @ControllerAction printform/display
  */
 class shopSyrinvoicePluginPrintformDisplayAction extends waViewAction
 {
