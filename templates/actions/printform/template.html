@@ -135,7 +135,7 @@
             <tr{if ($settings.mark_qty && $oi.quantity >= $settings.mark_qty) || ($oi.type == 'service') || ($next && $next.type == 'service')} class="{if $oi.type == 'service'}service{/if}{if $next && $next.type == 'service'} with-service{/if}{if $settings.mark_qty && $oi.quantity >= $settings.mark_qty} bold{/if}"{/if}>
                 <td class="index">{if $oi.type != 'service'}{$index}{$index=$index+1}{/if}</td>
                 <td class="name{if $oi.type == 'service'} service{/if}">{if $oi.type == 'service'}+&nbsp;{/if}{$oi.name|default:"&nbsp;"}{if $oi.sku} ({$oi.sku}){/if}</td>
-                <td class="quantity{if $oi.type == 'service'} service{/if}">{$oi.quantity|string_format:"%d"}{if $oi.type != 'service'}{$total_qty = $total_qty+$oi.quantity}{/if}</td>
+                <td class="quantity{if $oi.type == 'service'} service{/if}">{$oi.quantity|string_format:"%d"} {$oi.stock_unit|default:'шт'|escape}{if $oi.type != 'service'}{$total_qty = $total_qty+$oi.quantity}{/if}</td>
                 <td class="price{if $oi.type == 'service'} service{/if}">{shop_currency($oi.price, $order.currency, $settings.CURRENCY)}</td>
                 <td class="amount">{shop_currency($oi.total, $order.currency, $settings.CURRENCY)}</td>
             </tr>
