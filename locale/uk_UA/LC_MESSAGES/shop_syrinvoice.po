@@ -1,0 +1,149 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: shop/plugins/syrinvoice\n"
+"POT-Creation-Date: 2021-02-03 22:14+0300\n"
+"PO-Revision-Date: \n"
+"Last-Translator: shop/plugins/syrinvoice\n"
+"Language-Team: shop/plugins/syrinvoice\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-Basepath: utf-8\n"
+"Language: uk_UA\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+msgid "Invoice"
+msgstr "Накладна"
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "Phone"
+msgstr "Телефон"
+
+msgid "Seller"
+msgstr "Продавець"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Order #"
+msgstr "Замовлення №"
+
+msgid "Consignee"
+msgstr "Вантажоодержувач"
+
+msgid "Payer"
+msgstr "Платник"
+
+msgid "Payment type"
+msgstr "Тип оплати"
+
+msgid "Name"
+msgstr "Ім'я"
+
+msgid "Qty"
+msgstr "Кількість"
+
+msgid "Price"
+msgstr "Ціна"
+
+msgid "Amount"
+msgstr "Сума"
+
+msgid "Subtotal"
+msgstr "Всього"
+
+msgid "Discount"
+msgstr "Знижка"
+
+msgid "Shipping"
+msgstr "Доставка"
+
+msgid "Tax"
+msgstr "Податок"
+
+msgid "Total"
+msgstr "Итого"
+
+msgid "Simple and clean Invoice printform"
+msgstr "Проста і чиста форма друку накладних"
+
+msgid "Company Name"
+msgstr "Назва компанії"
+
+msgid "Your company name"
+msgstr "Назва вашої компанії"
+
+msgid "Company Slogan"
+msgstr "Слоган компанії"
+
+msgid "Your company slogan"
+msgstr "Слоган Вашої компанії"
+
+msgid "Company street"
+msgstr "Вулиця компанії"
+
+msgid "Your company street address"
+msgstr "Адреса вашої компанії"
+
+msgid "Company city"
+msgstr "Місто компанії"
+
+msgid "Your company city"
+msgstr "Місто вашої компанії"
+
+msgid "Company state/region"
+msgstr "Регіон компанії"
+
+msgid "Your company state/region"
+msgstr "Регіон вашої компанії"
+
+msgid "Company zip code"
+msgstr "Поштовий Індекс компанії"
+
+msgid "Your company zip/postal code"
+msgstr "Поштовий Індекс Вашої компанії"
+
+msgid "Company country"
+msgstr "Країна компанії"
+
+msgid "Your company country"
+msgstr "Країна Вашої компанії"
+
+msgid "Company phone"
+msgstr "Телефон компанії"
+
+msgid "Your company phone"
+msgstr "Телефон вашої компанії"
+
+msgid "Currency"
+msgstr "Валюта"
+
+msgid "Select the currency for the invoice"
+msgstr "Виберіть валюту"
+
+msgid "Interactive elements"
+msgstr "Інтерактивні елементи"
+
+msgid "Elements that can cause problems with mass-printing mode of Shop-Script 7"
+msgstr "Елементи, які можуть викликати проблеми з режимом масової друку Shop-Script 7+"
+
+msgid "Automatically open print dialog"
+msgstr "Автоматичне відкриття діалогового вікна друку"
+
+msgid "\"Close\" button"
+msgstr "Кнопка \"Закрити\""
+
+msgid "This button simply does not work in mass-print mode"
+msgstr "Ця кнопка просто не працює в режимі масового друку"
+
+msgid "Mark item with quantity greater or equal"
+msgstr "Позначте товар кількістю великим або рівним"
+
+msgid "Leave empty or set to 0 to disable this feature. Otherwise all items with quantity greater or equal than given value will be rendered with bold font. This may help your staff to collect an order."
+msgstr "Залиште порожнім або встановіть значення 0, щоб відключити цю функцію. В іншому випадку всі елементи з кількістю, великим або рівним заданому значенню, будуть відображатися жирним шрифтом. Це може допомогти вашим співробітникам зібрати замовлення."

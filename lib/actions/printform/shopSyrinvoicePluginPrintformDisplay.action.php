@@ -2,7 +2,7 @@
 /**
  * @package Syrinvoice.Controllers
  * @version 3.0.0
- * @copyright (c) 2014-2019, Serge Rodovnichenko
+ * @copyright (c) 2014-2021, Serge Rodovnichenko
  * @license http://www.webasyst.com/terms/#eula Webasyst
  */
 
