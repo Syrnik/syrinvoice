@@ -96,7 +96,7 @@
         {if !empty($order.shipping_address.address)}{$address = $order.shipping_address.address}{else}{$address = $order.contact_address}{/if}
         {if !empty($address)}<p class="address">{$order.shipping_address.address|escape}</p>{/if}
         {$phone = $order->getContactField('phone', 'html')}
-        {if !empty($phone)}<p class="phone">[`Phone`]: <span>{$phone|escape}</span></p>{/if}
+        {if !empty($phone)}<p class="phone">[`Phone`]: <span>{$phone}</span></p>{/if}
         {*if !empty($order.shipping_name)}<p class="method">{_w('Delivery type')}: <span>{$order.shipping_name}</span></p>{/if*}
     </div>
     <div id="billing">
