@@ -13,7 +13,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - CHANGELOG in Keep a Changelog format
 - Webasyst EULA license files in English and Russian
 - `compress-app-plugin.php` build script for packaging the plugin
-- GitHub Actions workflows: release on tag push, PHP compatibility matrix (7.2–8.4)
+- GitHub Actions workflows: release on tag push, PHP compatibility matrix (7.2–8.5)
+- Release workflow auto-compiles `.po` locale files to `.mo` via `msgfmt` before packaging
 
 ## [4.1.1] - 2023-05-22
 
