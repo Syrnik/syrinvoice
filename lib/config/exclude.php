@@ -1,6 +1,9 @@
 <?php
 return array(
     'README.md',
+    'README.en.md',
+    'LICENSE',
+    'LICENSE_ru',
     'CHANGELOG.md',
     'CONTRIBUTING.md',
     'contributors.txt',
@@ -26,5 +29,7 @@ return array(
     'build/*',
     '.git',
     'composer.lock',
-    'composer.json'
+    'composer.json',
+    'src/*',
+    'compress-app-plugin.php'
 );
