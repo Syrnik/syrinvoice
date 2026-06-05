@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- `shopSyrinvoicePluginViewHelper` — Smarty view helper with `sortOrderItems($order, $sort)` method for sorting order items by `name`, `price`, `weight`, `quantity`, or `total` (multi-field sort supported via comma-separated string)
 - README in Russian and English, cross-linked
 - CHANGELOG in Keep a Changelog format
 - Webasyst EULA license files in English and Russian

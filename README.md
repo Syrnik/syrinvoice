@@ -24,6 +24,28 @@
 
 Установите плагин через [магазин Webasyst](https://www.webasyst.ru/store/plugin/shop/syrinvoice/).
 
+## Использование в шаблонах (для разработчиков)
+
+Плагин регистрирует хелпер Smarty, доступный в шаблоне печатной формы как `{$wa->shop->syrinvoicePlugin}`.
+
+### Метод `sortOrderItems`
+
+Возвращает позиции заказа, отсортированные по указанному полю (или набору полей).
+
+```smarty
+{* Сортировка по одному полю *}
+{$items = $wa->shop->syrinvoicePlugin->sortOrderItems($order, 'name')}
+
+{* Сортировка по нескольким полям: сначала по имени, при равенстве — по цене *}
+{$items = $wa->shop->syrinvoicePlugin->sortOrderItems($order, 'name, price')}
+
+{* Параметр сортировки опционален, по умолчанию — 'name' *}
+{$items = $wa->shop->syrinvoicePlugin->sortOrderItems($order)}
+```
+
+Поддерживаемые поля сортировки: `name`, `price`, `weight`, `quantity`, `total`.  
+Строковые поля (`name`) сравниваются без учёта регистра.
+
 ## Поддержка
 
 [www.syrnik.com/support/](https://www.syrnik.com/support/)
